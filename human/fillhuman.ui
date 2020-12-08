@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FillHuman</class>
+ <widget class="QDialog" name="FillHuman">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>578</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Заполните поля</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="3">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>* - обязательные поля</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>Национальность*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Имя*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>Дата смерти</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Вес*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Рост*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Пол*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" colspan="2">
+       <widget class="QLineEdit" name="NameLineEdit"/>
+      </item>
+      <item row="5" column="2" colspan="2">
+       <widget class="QSpinBox" name="weightSetSpinBox">
+        <property name="suffix">
+         <string/>
+        </property>
+        <property name="maximum">
+         <number>300</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Возраст*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2" colspan="2">
+       <widget class="QSpinBox" name="heightSetSpinBox"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Дата рождения*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2" colspan="2">
+       <widget class="QComboBox" name="nationalityChooseComboBox">
+        <item>
+         <property name="text">
+          <string>Русские</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Татары</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Украинцы</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Башкиры</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Чуваши</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Чеченцы</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Армяне</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Мордва</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Аварцы</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Белорусы</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Казахи</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Удмурты</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="8" column="3">
+       <widget class="QDateEdit" name="deathDaydateEdit">
+        <property name="date">
+         <date>
+          <year>1790</year>
+          <month>1</month>
+          <day>1</day>
+         </date>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="2">
+       <widget class="QComboBox" name="genderChooseComboBox">
+        <item>
+         <property name="text">
+          <string>Мужской</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Женский </string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="2" colspan="2">
+       <widget class="QSpinBox" name="ageSetSpinBox">
+        <property name="maximum">
+         <number>222</number>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2" colspan="2">
+       <widget class="QDateEdit" name="birthDaydateEdit"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QPushButton" name="enterDeathDayPushButton">
+        <property name="text">
+         <string>Ввести дату смерти</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QPushButton" name="cancelEnteringDeathDayPushButton">
+        <property name="text">
+         <string>Отменить ввод</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QPushButton" name="savePushButton">
+     <property name="text">
+      <string>Сохранить данные</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QPushButton" name="cancelPushButton">
+     <property name="text">
+      <string>Вернуться назад</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
