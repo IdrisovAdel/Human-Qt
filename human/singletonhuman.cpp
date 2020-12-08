@@ -55,6 +55,11 @@ const std::string &SingletonHuman::getDeathDate(const unsigned humanNumber) cons
   return human[humanNumber].getDeathDate();
 }
 
+const Human &SingletonHuman::getHuman(unsigned inVectorNumber) const
+{
+  return human[inVectorNumber];
+}
+
 
 SingletonHuman::SingletonHuman(QObject *parent) : QObject(parent)
 {

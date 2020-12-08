@@ -14,21 +14,22 @@ dataWindow::dataWindow(QWidget *parent) :
                                                       << "Дата рождения" << "Дата смерти");
       for(int temp1 = 0; temp1 < ui->humanTableWidget->rowCount(); ++temp1)
         {
-          QTableWidgetItem * newItem = new QTableWidgetItem(QString::fromStdString(SingletonHuman::instance().getName(static_cast<unsigned>(temp1))));
+          Human human = SingletonHuman::instance().getHuman(static_cast<unsigned>(temp1));
+          QTableWidgetItem * newItem = new QTableWidgetItem(QString::fromStdString(human.getName()));
           ui->humanTableWidget->setItem(temp1, 0, newItem);
-          newItem = new QTableWidgetItem(QString::fromStdString(SingletonHuman::instance().getGender(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::fromStdString(human.getGender()));
           ui->humanTableWidget->setItem(temp1, 1, newItem);
-          newItem = new QTableWidgetItem(QString::number(SingletonHuman::instance().getAge(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::number(human.getAge()));
           ui->humanTableWidget->setItem(temp1, 2, newItem);
-          newItem = new QTableWidgetItem(QString::number(SingletonHuman::instance().getHeight(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::number(human.getHeight()));
           ui->humanTableWidget->setItem(temp1, 3, newItem);
-          newItem = new QTableWidgetItem(QString::number(SingletonHuman::instance().getWeight(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::number(human.getWeight()));
           ui->humanTableWidget->setItem(temp1, 4, newItem);
-          newItem = new QTableWidgetItem(QString::fromStdString(SingletonHuman::instance().getNationality(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::fromStdString(human.getNationality()));
           ui->humanTableWidget->setItem(temp1, 5, newItem);
-          newItem = new QTableWidgetItem(QString::fromStdString(SingletonHuman::instance().getBirthDate(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::fromStdString(human.getBirthDate()));
           ui->humanTableWidget->setItem(temp1, 6, newItem);
-          newItem = new QTableWidgetItem(QString::fromStdString(SingletonHuman::instance().getDeathDate(static_cast<unsigned>(temp1))));
+          newItem = new QTableWidgetItem(QString::fromStdString(human.getDeathDate()));
           ui->humanTableWidget->setItem(temp1, 7, newItem);
         }
     }

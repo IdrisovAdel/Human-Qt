@@ -16,6 +16,7 @@ public:
 
   size_t humanVectorSize();
 
+
   std::string const & getName(const unsigned humanNumber) const;
   std::string const & getGender(const unsigned humanNumber) const;
   int getAge(const unsigned humanNumber) const;
@@ -24,7 +25,8 @@ public:
   std::string const & getNationality(const unsigned humanNumber) const;
   std::string const & getBirthDate(const unsigned humanNumber) const;
   std::string const & getDeathDate(const unsigned humanNumber) const;
-  //void humanVectorPrint();
+
+  Human const & getHuman(unsigned inVectorNumber) const;
 
 
 private:
