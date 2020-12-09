@@ -22,6 +22,7 @@ QtApplication {
         "datawindow.cpp",
         "datawindow.h",
         "datawindow.ui",
+        "file.h",
         "fillhuman.cpp",
         "fillhuman.h",
         "fillhuman.ui",

@@ -66,12 +66,12 @@ void FillHuman::on_savePushButton_clicked()
     }
   else human.setWeight(ui->weightSetSpinBox->value());
 
-  human.setBirthDate(ui->birthDaydateEdit->date().toString("dd - MM - yyyy").toStdString());
+  human.setBirthDate(ui->birthDaydateEdit->date().toString("dd.MM.yyyy").toStdString());
 
   ui->deathDaydateEdit->setMinimumDate(ui->birthDaydateEdit->date());
   if(!ui->deathDaydateEdit->isHidden() && ui->deathDaydateEdit->date() != ui->birthDaydateEdit->date())
     {
-      human.setDeathDate(ui->deathDaydateEdit->date().toString("dd - MM - yyyy").toStdString());
+      human.setDeathDate(ui->deathDaydateEdit->date().toString("dd.MM.yyyy").toStdString());
     }
   else if(!ui->deathDaydateEdit->isHidden() && ui->deathDaydateEdit->date() == ui->birthDaydateEdit->date())
     {
@@ -92,7 +92,7 @@ void FillHuman::on_savePushButton_clicked()
 
 void FillHuman::on_enterDeathDayPushButton_clicked()
 {
-    human.setBirthDate(ui->birthDaydateEdit->date().toString("dd - MM - yyyy").toStdString());
+    human.setBirthDate(ui->birthDaydateEdit->date().toString("dd.MM.yyyy").toStdString());
     ui->deathDaydateEdit->setMinimumDate(ui->birthDaydateEdit->date());
     ui->deathDaydateEdit->show();
     ui->cancelEnteringDeathDayPushButton->show();

@@ -16,17 +16,10 @@ public:
 
   size_t humanVectorSize();
 
-
-  std::string const & getName(const unsigned humanNumber) const;
-  std::string const & getGender(const unsigned humanNumber) const;
-  int getAge(const unsigned humanNumber) const;
-  int getHeight(const unsigned humanNumber) const;
-  int getWeight(const unsigned humanNumber) const;
-  std::string const & getNationality(const unsigned humanNumber) const;
-  std::string const & getBirthDate(const unsigned humanNumber) const;
-  std::string const & getDeathDate(const unsigned humanNumber) const;
-
   Human const & getHuman(unsigned inVectorNumber) const;
+
+  const Human fromString(std::string const & line) const;
+  const std::string toString(Human const & tempHuman) const;
 
 
 private:
@@ -36,6 +29,7 @@ private:
   SingletonHuman & operator=(SingletonHuman const & other);
 
   std::vector<Human> human;
+
 
 
 

@@ -15,49 +15,40 @@ size_t SingletonHuman::humanVectorSize()
   return human.size();
 }
 
-const std::string &SingletonHuman::getName(const unsigned humanNumber) const
-{
-  return human[humanNumber].getName();
-}
-
-const std::string &SingletonHuman::getGender(const unsigned humanNumber) const
-{
-  return human[humanNumber].getGender();
-}
-
-int SingletonHuman::getAge(const unsigned humanNumber) const
-{
-  return human[humanNumber].getAge();
-}
-
-int SingletonHuman::getHeight(const unsigned humanNumber) const
-{
-  return human[humanNumber].getHeight();
-}
-
-int SingletonHuman::getWeight(const unsigned humanNumber) const
-{
-  return human[humanNumber].getWeight();
-}
-
-const std::string &SingletonHuman::getNationality(const unsigned humanNumber) const
-{
-  return human[humanNumber].getNationality();
-}
-
-const std::string &SingletonHuman::getBirthDate(const unsigned humanNumber) const
-{
-  return human[humanNumber].getBirthDate();
-}
-
-const std::string &SingletonHuman::getDeathDate(const unsigned humanNumber) const
-{
-  return human[humanNumber].getDeathDate();
-}
 
 const Human &SingletonHuman::getHuman(unsigned inVectorNumber) const
 {
   return human[inVectorNumber];
+}
+
+const Human SingletonHuman::fromString(const std::string &line) const
+{
+  Human temp;
+  size_t position = 0;
+  temp.setName(line.substr(position, line.find(' ', position)));
+  position = line.find(' ', position) + 1;
+  temp.setGender(line.substr(position, line.find(' ', position) - position));
+  position = line.find(' ', position) + 1;
+  temp.setAge(std::stoi(line.substr(position, line.find(' ', position) - position)));
+  position = line.find(' ', position) + 1;
+  temp.setHeight(std::stoi(line.substr(position, line.find(' ', position) - position)));
+  position = line.find(' ', position) + 1;
+  temp.setWeight(std::stoi(line.substr(position, line.find(' ', position) - position)));
+  position = line.find(' ', position) + 1;
+  temp.setNationality(line.substr(position, line.find(' ', position) - position));
+  position = line.find(' ', position) + 1;
+  temp.setBirthDate(line.substr(position, line.find(' ', position) - position));
+  position = line.find(' ', position) + 1;
+  temp.setDeathDate(line.substr(position, line.size() - position));
+  return temp;
+}
+
+const std::string SingletonHuman::toString(const Human &tempHuman) const
+{
+  std::string line = tempHuman.getName() + " " + tempHuman.getGender() + " " + std::to_string(tempHuman.getAge()) + " "
+      + std::to_string(tempHuman.getHeight()) + " " + std::to_string(tempHuman.getWeight()) + " " + tempHuman.getNationality() + " "
+      + tempHuman.getBirthDate() + " " + tempHuman.getDeathDate();
+  return line;
 }
 
 
