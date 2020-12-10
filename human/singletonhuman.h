@@ -5,6 +5,7 @@
 #include "human.h"
 #include <vector>
 #include <QDebug>
+#include "humanfile.h"
 
 class SingletonHuman : public QObject
 {
@@ -15,12 +16,13 @@ public:
   void toHumanVectorAdd(Human const & instance);
 
   size_t humanVectorSize();
+  void fillFile(Human const & tempHuman);
 
   Human const & getHuman(unsigned inVectorNumber) const;
 
   const Human fromString(std::string const & line) const;
   const std::string toString(Human const & tempHuman) const;
-
+  void fillVectorFromFile();
 
 private:
   explicit SingletonHuman(QObject *parent = nullptr);
@@ -29,6 +31,9 @@ private:
   SingletonHuman & operator=(SingletonHuman const & other);
 
   std::vector<Human> human;
+
+  humanFile * file;
+
 
 
 

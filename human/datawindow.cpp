@@ -6,7 +6,10 @@ dataWindow::dataWindow(QWidget *parent) :
   ui(new Ui::dataWindow)
 {
   ui->setupUi(this);
-  //if(SingletonHuman::instance().humanVectorSize())
+
+  //SingletonHuman::instance().fillVectorFromFile();
+
+  if(SingletonHuman::instance().humanVectorSize())
     {
       ui->humanTableWidget->setRowCount(static_cast<int>(SingletonHuman::instance().humanVectorSize()));
       ui->humanTableWidget->setColumnCount(8);
@@ -32,7 +35,6 @@ dataWindow::dataWindow(QWidget *parent) :
           newItem = new QTableWidgetItem(QString::fromStdString(human.getDeathDate()));
           ui->humanTableWidget->setItem(temp1, 7, newItem);
         }
-      SingletonHuman::instance().fromString("Имя Пол 23 34 45  Национальность Дата рождения Дата смерти");
     }
 }
 

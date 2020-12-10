@@ -7,12 +7,20 @@ SingletonHuman &SingletonHuman::instance()
 
 void SingletonHuman::toHumanVectorAdd(const Human &instance)
 {
+  fillFile(instance);
   human.push_back(instance);
 }
+
+
 
 size_t SingletonHuman::humanVectorSize()
 {
   return human.size();
+}
+
+void SingletonHuman::fillFile(const Human &tempHuman)
+{
+  file->inFileWrite(toString(tempHuman));
 }
 
 
@@ -51,7 +59,20 @@ const std::string SingletonHuman::toString(const Human &tempHuman) const
   return line;
 }
 
+void SingletonHuman::fillVectorFromFile()
+{
+  std::string text = file->fromFileRead();
+  for(size_t position = 0; position < text.size(); ++position)
+    {
+      std::string temp = text.substr(position, text.find('\n', position) - position);
+      position = text.find('\n', position);
+      human.push_back(fromString(temp));
+    }
+}
+
 
 SingletonHuman::SingletonHuman(QObject *parent) : QObject(parent)
 {
+  file = new humanFile();
+  fillVectorFromFile();
 }
