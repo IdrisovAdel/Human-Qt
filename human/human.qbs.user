@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.10.0, 2020-12-09T23:24:03. -->
+<!-- Written by QtCreator 4.10.0, 2021-01-20T15:46:01. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -121,7 +121,7 @@
     <value type="QString" key="Qbs.configName">Debug</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/pro/Desktop/QtProjects/build-human-Desktop_Qt_5_13_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\pro\Desktop\QtProjects\build-human-Desktop_Qt_5_13_1_MinGW_64_bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -132,11 +132,12 @@
       <valuemap type="QVariantMap" key="Qbs.Configuration">
        <value type="QString" key="qbs.defaultBuildVariant">release</value>
        <value type="QString" key="qbs.profile">qtc_Desktop__78bafbc5</value>
+       <value type="bool" key="qbspm.forceProbes">false</value>
       </valuemap>
       <value type="bool" key="Qbs.DryKeepGoing">false</value>
       <value type="bool" key="Qbs.DryRun">false</value>
       <value type="bool" key="Qbs.Install">true</value>
-      <value type="int" key="Qbs.MaxJobs">0</value>
+      <value type="int" key="Qbs.MaxJobs">4</value>
       <value type="bool" key="Qbs.ShowCommandLines">false</value>
       <value type="bool" key="Qbs.enableQmlDebuggingKey">false</value>
       <value type="bool" key="Qbs.forceProbesKey">false</value>
